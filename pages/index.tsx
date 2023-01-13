@@ -1,7 +1,9 @@
+import image from '../images/STOCXCEL.png';
+
 export default function Home() {
   return (
-    <h1 className="text-2xl text-red-200">
-      Hello world!
-    </h1>
+    <header>
+      <h1>StocXcel</h1>
+    </header>
   )
 }
