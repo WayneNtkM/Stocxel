@@ -5,7 +5,7 @@ export default function Main() {
   const { ref: ref2, view: view2 } = useObserver<HTMLHeadingElement>();
 
   return (
-    <main className="w-screen h-screen flex-col justify-around items-center">
+    <main className="w-screen h-screen flex-col justify-around items-center p-4">
         <h1 ref={ref} className={ view?.isIntersecting ? 'opacity-1' : 'opacity-0' }>Ola, beleza?</h1>
         <div className="h-24" />
         <div className="h-24" />
