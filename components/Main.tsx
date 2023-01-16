@@ -3,7 +3,7 @@ import useObserver from "../hooks/useObeserver";
 export default function Main() {
   const { ref, view } = useObserver<HTMLHeadingElement>();
   const { ref: ref2, view: view2 } = useObserver<HTMLHeadingElement>();
-  
+
   return (
     <main className="w-screen h-screen flex-col justify-around items-center">
         <h1 ref={ref} className={ view?.isIntersecting ? 'opacity-1' : 'opacity-0' }>Ola, beleza?</h1>
