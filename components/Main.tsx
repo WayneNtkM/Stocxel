@@ -1,5 +1,5 @@
 import useObserver from "../hooks/useObeserver";
-import {BiSearchAlt} from 'react-icons/bi';
+import Carousel from "./Carousel";
 import Search from "./Search";
 
 export default function Main() {
@@ -9,7 +9,7 @@ export default function Main() {
     <main
     className="w-[90vw] h-screen flex-col justify-around items-center p-4 m-auto"
     >
-        <div className="mb-4">
+        <div className="mb-8">
           <h1
             ref={ref}
             className={ `${view?.isIntersecting ? 'animate-fadeIn' : ''} text-[17px]
@@ -18,6 +18,7 @@ export default function Main() {
             Busque por ativos nacionais e fundos imobiliários.
           </h1>
         </div>
+        <Carousel />
         <Search />
       </main>
   );
