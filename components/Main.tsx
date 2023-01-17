@@ -1,21 +1,25 @@
 import useObserver from "../hooks/useObeserver";
+import Carousel from "./Carousel";
+import Search from "./Search";
 
 export default function Main() {
   const { ref, view } = useObserver<HTMLHeadingElement>();
-  const { ref: ref2, view: view2 } = useObserver<HTMLHeadingElement>();
 
   return (
-    <main className="w-screen h-screen flex-col justify-around items-center">
-        <h1 ref={ref} className={ view?.isIntersecting ? 'opacity-1' : 'opacity-0' }>Ola, beleza?</h1>
-        <div className="h-24" />
-        <div className="h-24" />
-        <div className="h-24" />
-        <div className="h-24" />
-        <div className="h-24" />
-        <div className="h-24" />
-        <div className="h-24" />
-        <div className="h-24" />
-        <h1 ref={ref2} className={ view2?.isIntersecting ? 'opacity-0' : 'opacity-1' }>Ola, beleza?</h1>
+    <main
+    className="w-[90vw] h-screen flex-col justify-around items-center p-4 m-auto"
+    >
+        <div className="mb-8">
+          <h1
+            ref={ref}
+            className={ `${view?.isIntersecting ? 'animate-fadeIn' : ''} text-[17px]
+            font-[helvetica nue] text-center font-[600] text-neutral-800/[0.9]` }
+          >
+            Busque por ativos nacionais e fundos imobiliários.
+          </h1>
+        </div>
+        <Carousel />
+        <Search />
       </main>
   );
 }
