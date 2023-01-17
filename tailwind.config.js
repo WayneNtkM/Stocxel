@@ -7,15 +7,25 @@ module.exports = {
   theme: {
     extend: {
       variants: {
-        // animation: ["motion-safe"]
+        animation: ["motion-safe"]
       },
-      // animation: {
-      //   fadeIn: "fadeIn 2s ease-in forwards"
-      // },
-      // keyframes: {
-      //   fadeIn: {
-      //     "0%": { opacity: 0 },
-      //     "100%": { opacity: 1 }
+      animation: {
+        fadeIn: "fadeIn 1s ease-in forwards",
+        scale: "scale 2s"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0, transform: { translateY: '50%' } },
+          "100%": { opacity: 0.8, transform: { translateY: 0 }  }
+        },
+        scale: {
+          "0%": { opacity: 0, transform: { scale: 0.5 } },
+          "100%": { opacity: 0, transform: { scale: 1 } }
+        }
+      },
+      // media: {
+      //   prefersReducedMotion: {
+      //     fadeIn, scale: { animation: none }
       //   }
       // }
     }
