@@ -6,28 +6,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        "calc": "calc(350px * 9)"
+      },
       variants: {
         animation: ["motion-safe"]
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in forwards",
-        scale: "scale 2s"
+        scale: "scale 2s",
+        carousel: "carousel 40s linear infinite",
       },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0, transform: { translateY: '50%' } },
-          "100%": { opacity: 0.8, transform: { translateY: 0 }  }
-        },
-        scale: {
-          "0%": { opacity: 0, transform: { scale: 0.5 } },
-          "100%": { opacity: 0, transform: { scale: 1 } }
-        }
-      },
-      // media: {
-      //   prefersReducedMotion: {
-      //     fadeIn, scale: { animation: none }
-      //   }
-      // }
     }
   },
   plugins: [],

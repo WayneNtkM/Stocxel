@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import Fetcher from "../pages/api/stocks";
 
 export default function useFetcher() {
-  const [stocks, setStocks] = useState({ stocks: [], sorted: [] });
+  const [stocks, setStocks] = useState({
+    stocks: [],
+    sorted: { firstSet: [] }
+  });
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -10,17 +13,19 @@ export default function useFetcher() {
       try {
         const fetcher = new Fetcher();
         const data = await fetcher.getAllStcoks();
+        const sortedArr = data.stocks
+        .sort((a: { change: number }, b: { change: number }) => b.change - a.change);
         setStocks({ 
           stocks: data.stocks,
-          sorted: data.stocks
-            .sort((a: { change: number }, b: { change: number }) => b.change - a.change)
-            .slice(0, 9),
+          sorted: {
+            firstSet: sortedArr.slice(0, 9),
+          }
         });
         
       } catch (error: any) {
         setError(error);
       }
-    })()
+    })();
   }, []);
 
   return { stocks, error };
