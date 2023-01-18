@@ -10,7 +10,7 @@ function Carousel() {
   
   return (
     <div className="w-[100%] overflow-hidden h-[100px] relative grid mb-8">
-        <div className="flex w-calc animate-carousel hover:pause">
+        <div className="flex w-calc animate-carousel">
           {stocks.sorted.firstSet.map(({ change, close, logo, stock}: StocksSorted) => (
             <div className="flex pl-[30px] w-[350px]" key={stock}>
               <Image
