@@ -72,4 +72,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ---
 
-Desenvolvido por [Wayne Takahashi](https://github.com/WayneNtkM), © 2022.
+Desenvolvido por [Wayne Takahashi](https://www.linkedin.com/in/wayne-takahashi/), © 2022.
