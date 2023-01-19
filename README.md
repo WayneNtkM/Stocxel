@@ -1,6 +1,10 @@
 # StocXcel
 
-until now: app focused on stock prices for Brazil. This is a Next.js(https://nextjs.org/) project utilizing tRPC for data fething, written with typescript and styled with tailwindcss. 
+Until now: app focused on stock prices for Brazil. This is a Next.js(https://nextjs.org/) project utilizing tRPC for data fething, written with typescript and styled with tailwindcss.
+Future feats: fixed income calculator, login, investment portfolio based on stocks and segments bought by the user.
+
+## OBJECTIVE
+
 
 App link: https://stocxel.vercel.app (mobile css only - for now)
 
