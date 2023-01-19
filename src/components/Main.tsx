@@ -12,10 +12,13 @@ export default function Main() {
         <div className="mb-8">
           <h1
             ref={ref}
-            className={ `${view?.isIntersecting ? 'animate-fadeIn' : ''} text-[17px]
-            font-[helvetica nue] text-center font-[600] text-neutral-800/[0.9]` }
+            className="text-[17px] font-[helvetica nue] text-center font-[600] text-neutral-800/[0.9]"
           >
             Busque por ativos nacionais e fundos imobiliários.
+          </h1>
+          <h1 className={`text-[12px] text-center
+            ${view?.isIntersecting ? 'animate-scale' : ''}`}>
+            (valores podem estar desatualizados ou conter inconsistências)
           </h1>
         </div>
         <Carousel />
