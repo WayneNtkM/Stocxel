@@ -32,7 +32,7 @@ function Search() {
       />
       <button type="button" className="text-2xl text-gray-800 bg-transparent"><BiSearchAlt /></button>
     </div>
-    <div className="flex flex-col gap-4 p-2">
+    <div className="flex flex-col gap-4 p-2 animate-scale">
       {data.stocks
         .filter(({ stock, name }) => stock.toLocaleLowerCase()
           .includes(input.toLocaleLowerCase()) || name.toLocaleLowerCase()
