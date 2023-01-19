@@ -9,11 +9,11 @@ function Search() {
   const { ref, view } = useObserver<HTMLHeadingElement>();
   const { data, isLoading } = trpc.stocks.useQuery();
   const [input, setInput] = useState('');
-
+  
   const handleChange = useCallback(({ target: { value } }: { target: { value: string } }) => {
     setInput(value);
   }, [])
-
+  
   if (isLoading || !data) return <div>Loading...</div>
 
   return (
@@ -27,10 +27,10 @@ function Search() {
       <input
         onChange={handleChange}
         type="text"
-        className=" w-[300px] h-[50px] p-3 bg-transparent"
+        className=" w-[300px] h-[50px] p-3 bg-transparent outline-inherit"
         placeholder="Digite o código do ativo"
       />
-      <button type="button" className="text-2xl text-gray-800 bg-transparent"><BiSearchAlt /></button>
+      <span className="text-2xl text-gray-800 bg-transparent"><BiSearchAlt /></span>
     </div>
     <div className="flex flex-col gap-4 p-2 animate-scale">
       {data.stocks

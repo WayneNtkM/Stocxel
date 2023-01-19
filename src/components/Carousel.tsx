@@ -23,7 +23,7 @@ function Carousel() {
               <div className="flex flex-col mt-4">
                 <h2 className="text-[20px] font-[600]">{stock}</h2>
                 <div className="flex items-center text-[16px] font-[600] text-green-600">
-                  <span>{`R$${close}`}</span>
+                  <span>{`R$${close.toFixed(2)}`}</span>
                   <AiOutlineArrowUp />
                   <span>{`. ${change.toFixed(2)}%`}</span>
                 </div>
