@@ -22,8 +22,8 @@ This is a fullstack project, with the frontend part being developed first, that 
 The following stacks were used:
 
 ### Front-end
-- TailwindCSS
-- [NextJS]([https://pt-br.reactjs.org/](https://nextjs.org))
+- TailwindCSS(https://tailwindcss.com)
+- [NextJS](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ### Back-end
@@ -35,7 +35,15 @@ The following stacks were used:
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:
+
+    git clone git@github.com:WayneNtkM/Stocxel.git
+
+Then, enter directory:
+
+    cd stocxcel
+
+finaly, run the development server:
 
 ```bash
 npm run dev
@@ -59,3 +67,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Desenvolvido por [Wayne Takahashi](https://github.com/WayneNtkM), © 2022.
