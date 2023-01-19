@@ -34,7 +34,8 @@ function Search() {
     </div>
     <div className="flex flex-col gap-4 p-2">
       {data.stocks
-        .filter(({ stock }) => stock.toLocaleLowerCase()
+        .filter(({ stock, name }) => stock.toLocaleLowerCase()
+          .includes(input.toLocaleLowerCase()) || name.toLocaleLowerCase()
           .includes(input.toLocaleLowerCase()))
         .slice(0, 9).map(({ change, close, logo, name, stock }) => (
         <div className="flex items-center justify-between" key={ stock }>
