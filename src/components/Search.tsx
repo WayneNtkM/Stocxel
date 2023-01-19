@@ -3,6 +3,7 @@ import {BiSearchAlt} from 'react-icons/bi';
 
 function Search() {
   const { ref, view } = useObserver<HTMLHeadingElement>();
+
   return (
     <div className="flex-col w-[100%] bg-transparent">
     <div
