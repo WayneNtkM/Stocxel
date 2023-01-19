@@ -13,7 +13,7 @@ module.exports = {
         animation: ["motion-safe"]
       },
       animation: {
-        fadeIn: "fadeIn 1s ease-in forwards",
+        fadeIn: "fadeInUp 1s ease-in forwards",
         scale: "scale 2s",
         carousel: "carousel 40s linear infinite",
       },
