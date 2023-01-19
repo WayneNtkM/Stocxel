@@ -12,7 +12,7 @@ This is a fullstack project, with the frontend part being developed first, that 
 ## Stacks
 
 <div>
-    <img src='https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' alt='ReactJS' />
+    <img src='https://img.shields.io/badge/Next-20232A?style=for-the-badge&logo=react&logoColor=61DAFB' alt='NextJS' />
     <img src='https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white' alt='ESlint' />
     <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
 </div>
