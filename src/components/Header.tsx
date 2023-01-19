@@ -12,7 +12,6 @@ export default function Header() {
           <hr className="w-[100px] bg-cyan-300 h-[1px] border-transparent" />
         </div>
         <div className="w-[100px] h-[50px]" />
-        <i>Ham</i>
       </header>
   );
 }
