@@ -24,7 +24,7 @@ This is a fullstack project, with the frontend part being developed first, that 
 The following stacks were used:
 
 ### Front-end
-- TailwindCSS(https://tailwindcss.com)
+- [TailwindCSS](https://tailwindcss.com)
 - [NextJS](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 
