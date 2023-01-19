@@ -19,6 +19,8 @@ This is a fullstack project, with the frontend part being developed first, that 
     <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </div>
 
+<br />
+
 The following stacks were used:
 
 ### Front-end
