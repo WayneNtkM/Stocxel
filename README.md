@@ -19,6 +19,20 @@ This is a fullstack project, with the frontend part being developed first, that 
     <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </div>
 
+The following stacks were used:
+
+### Front-end
+- TailwindCSS
+- [NextJS]([https://pt-br.reactjs.org/](https://nextjs.org))
+- [TypeScript](https://www.typescriptlang.org/)
+
+### Back-end
+- [TypeScript](https://www.typescriptlang.org/)
+- [tRPC](https://trpc.io)
+
+### Linter
+- [ESlint](https://eslint.org/)
+
 ## Getting Started
 
 First, run the development server:
