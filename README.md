@@ -1,10 +1,8 @@
 # StocXcel
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+until now: app focused on stock prices for Brazil. This is a Next.js(https://nextjs.org/) project utilizing tRPC for data fething, written with typescript and styled with tailwindcss. 
 
 App link: https://stocxel.vercel.app (mobile css only - for now)
-
-## 
 
 ## Getting Started
 
