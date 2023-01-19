@@ -1,23 +1,23 @@
 import Image from "next/image";
-import useFetcher from "../hooks/useFetcher";
 import { StocksSorted } from "../types/objectTypes";
 import { AiOutlineArrowUp } from 'react-icons/ai';
+import { trpc } from "@/utils/trpc";
 
 function Carousel() {
-  const { stocks } = useFetcher();
+  const { data, isLoading } = trpc.stocks.useQuery();
 
-  console.log();
-  
+  if (isLoading || !data) return <div>Loading...</div>
+
   return (
     <div className="w-[100%] overflow-hidden h-[100px] relative grid mb-8">
         <div className="flex w-calc animate-carousel">
-          {stocks.sorted.firstSet.map(({ change, close, logo, stock}: StocksSorted) => (
+          {data.sorted.map(({ change, close, logo, stock}: StocksSorted) => (
             <div className="flex pl-[30px] w-[350px]" key={stock}>
               <Image
                 src={logo}
                 alt={stock}
-                width={50}
-                height={50}
+                width={80}
+                height={80}
                 className="w-[80px] h-[80px] mr-[2em] rounded"
               />
               <div className="flex flex-col mt-4">
