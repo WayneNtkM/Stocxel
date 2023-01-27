@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-screen flex justify-around items-center mb-5 bg-black/[0.8]">
+    <header className={`w-screen flex justify-around
+      items-center mb-5 bg-slate-800 sticky top-0 z-[1]`}>
         <div className="antialiased">
           <Link href='/'>
             <h1
