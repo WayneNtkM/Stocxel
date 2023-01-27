@@ -4,27 +4,28 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs'
 
 export default function Footer() {
   return (
-    <footer className={`flex flex-col gap-4 bg-black/[0.8] w-[100vw] h-[auto] p-[1em]`}>
+    <footer className={`flex flex-col gap-4 bg-slate-100 
+        w-[100vw] h-[auto] p-[2em] bottom-0 relative`}>
       <div>
         <h1
-          className="text-2xl w-40 text-white font-[Helvetica] font-[500]"
+          className="text-[28px] w-40 text-[#121212] font-[Helvetica] font-[700]"
         >
-          Stoc
-        <span className="text-cyan-300">X</span>
+          S
+        <span className="text-[#007aff] text-[28px]">X</span>
           cel
         </h1>
-        <hr className="w-[100px] bg-cyan-300 h-[1px] border-transparent" />
+        <hr className="w-[100px] bg-[#007aff] h-[1.7px] border-transparent" />
       </div>
       <div className='flex gap-4'>
         <Link href="https://github.com/WayneNtkM">
-          <BsGithub className='text-white text-[26px]' />
+          <BsGithub className='text-black text-[26px]' />
         </Link>
         <Link href="https://www.linkedin.com/in/wayne-takahashi/">
-          <BsLinkedin className='text-white text-[26px]' />
+          <BsLinkedin className='text-black text-[26px]' />
         </Link>
       </div>
       <div>
-        <small className='text-white'>
+        <small className='text-black'>
           © 2023 StocXcel. Desenvolvido por Wayne.
         </small>
       </div>
