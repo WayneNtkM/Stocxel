@@ -8,7 +8,9 @@ export default function useObserver<T>() {
     const observer = new IntersectionObserver((entries) => {
       setView(entries[0]);
     });
-    observer.observe(ref.current as unknown as Element)
+    if (ref.current) {
+      return observer.observe(ref.current as unknown as Element)
+    }
   }, [])
   return { ref, view }
 }
