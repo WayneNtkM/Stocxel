@@ -3,10 +3,18 @@
 @tailwind utilities;
 @tailwind components;
 
+* {
+    outline: none;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth
+}
+
 body {
     @apply bg-slate-100;
     @apply antialiased;
-}
+    }
 
 @layer utilities {
     .pause {
