@@ -7,16 +7,14 @@ import { useCallback } from "react";
 
 function Search() {
   const { ref, view } = useObserver<HTMLHeadingElement>();
-  const { data, isLoading } = trpc.stocks.useQuery();
+  const { data } = trpc.stocks.useQuery();
   const [input, setInput] = useState('');
   
   const handleChange = useCallback(({ target: { value } }: { target: { value: string } }) => {
     setInput(value);
   }, [])
   
-  if (isLoading || !data) return <div>Loading...</div>
-
-  return (
+return (
     <div className="flex-col w-[100%] bg-transparent">
     <div
       ref={ref}
@@ -32,8 +30,8 @@ function Search() {
       />
       <span className="text-2xl text-gray-800 bg-transparent"><BiSearchAlt /></span>
     </div>
-    <div className="flex flex-col gap-4 p-2 animate-scale">
-      {data.stocks
+    <div className="flex flex-col gap-4 p-[0.8em] animate-scale h-[330px] overflow-scroll">
+      {data?.stocks
         .filter(({ stock, name }) => stock.toLocaleLowerCase()
           .includes(input.toLocaleLowerCase()) || name.toLocaleLowerCase()
           .includes(input.toLocaleLowerCase()))
