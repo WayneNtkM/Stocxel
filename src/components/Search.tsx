@@ -60,7 +60,6 @@ return (
           </div>
         </div>
       ))}
-      <hr className="w-[60%]" />
     </div>
   </div>
   );
