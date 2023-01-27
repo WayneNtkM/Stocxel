@@ -4,7 +4,7 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs'
 
 export default function Footer() {
   return (
-    <footer className={`flex flex-col gap-4 bg-slate-100 
+    <footer className={`flex flex-col gap-[1.5em] bg-slate-100 
         w-[100vw] h-[auto] p-[2em] bottom-0 relative`}>
       <div>
         <h1
