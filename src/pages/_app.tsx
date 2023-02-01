@@ -6,7 +6,9 @@ import { trpc } from '../utils/trpc';
 
 function App({ Component, pageProps: { ...pageProps } }: AppProps) {
   return (
+    <SessionProvider>
       <Component {...pageProps} />
+    </SessionProvider>
   )
 }
 
