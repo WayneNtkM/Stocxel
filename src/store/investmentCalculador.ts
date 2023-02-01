@@ -33,4 +33,10 @@ export const useCalculatorResults = create(
   }))
 );
 
+export const moneyFormat = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'BRL',
+  minimumFractionDigits: 2
+});
+
 export default useCalculatorStore;
