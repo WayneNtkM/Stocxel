@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Nav from "./Nav";
 
 export default function Header() {
   return (
@@ -17,7 +18,9 @@ export default function Header() {
             <hr className="w-[100px] text-[#007aff] h-[1px] border-transparent" />
           </Link>
         </div>
-        <div className="w-[100px] h-[50px]" />
+        <div className="w-[100px] h-[50px]">
+          <Nav />
+        </div>
       </header>
   );
 }
