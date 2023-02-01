@@ -30,7 +30,7 @@ return (
       />
       <span className="text-2xl text-gray-800 bg-transparent"><BiSearchAlt /></span>
     </div>
-    <div className="flex flex-col gap-4 p-[0.8em] animate-scale h-[330px] overflow-scroll">
+    <div className="flex flex-col gap-4 p-[0.8em] animate-scale">
       {data?.stocks
         .filter(({ stock, name }) => stock.toLocaleLowerCase()
           .includes(input.toLocaleLowerCase()) || name.toLocaleLowerCase()

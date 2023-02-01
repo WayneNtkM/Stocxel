@@ -12,7 +12,7 @@ export default function Main() {
 
   return (
     <main
-    className="w-[90vw] h-screen flex-col justify-around items-center p-4 m-auto"
+    className="w-[90vw] flex-col justify-around items-center p-4 m-auto"
     >
         <div className="mb-8">
           <h1
