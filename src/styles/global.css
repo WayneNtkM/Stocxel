@@ -8,7 +8,7 @@
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 
 body {
