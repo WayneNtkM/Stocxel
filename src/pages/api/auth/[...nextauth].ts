@@ -10,6 +10,13 @@ export default NextAuth({
     GoogleProvider({
       clientId: '31528317457-g0ic4nuk1hjadv7tn39aha6d5hodgm3e.apps.googleusercontent.com',
       clientSecret: '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',
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        },
+      },
     }),
   ],
   debug: true,
