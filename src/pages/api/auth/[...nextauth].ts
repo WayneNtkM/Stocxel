@@ -1,12 +1,27 @@
-import NextAuth from 'next-auth/next';
-import Auth0Provider from 'next-auth/providers/auth0';
+import NextAuth from "next-auth";
+import { randomBytes, randomUUID } from "crypto";
+import GoogleProvider from 'next-auth/providers/google';
 
 export default NextAuth({
   providers: [
-    Auth0Provider({
-      clientId: process.env.AUTH0_CLIENT_ID as string,
-      clientSecret: process.env.AUTH0_CLIENT_SECRET as string,
-    })
+    GoogleProvider({
+      clientId: '31528317457-g0ic4nuk1hjadv7tn39aha6d5hodgm3e.apps.googleusercontent.com',
+      clientSecret: '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',
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        },
+      },
+    }),
   ],
-  secret: process.env.JWT_SECRET,
+  debug: true,
+  session: {
+    maxAge: 30 * 24 * 60 * 60,
+    updateAge: 4 * 60 * 60,
+    generateSessionToken: () => {
+      return randomUUID?.() ?? randomBytes(32).toString("hex")
+    }
+  }
 });
