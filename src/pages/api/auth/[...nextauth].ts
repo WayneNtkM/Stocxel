@@ -5,8 +5,8 @@ import GoogleProvider from 'next-auth/providers/google';
 export default NextAuth({
   providers: [
     GoogleProvider({
-      clientId: '31528317457-g0ic4nuk1hjadv7tn39aha6d5hodgm3e.apps.googleusercontent.com',
-      clientSecret: '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',
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
       authorization: {
         params: {
           prompt: "consent",
@@ -16,6 +16,7 @@ export default NextAuth({
       },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   debug: true,
   session: {
     maxAge: 30 * 24 * 60 * 60,
