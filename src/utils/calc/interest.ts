@@ -25,7 +25,8 @@ const calcFee = (month: number) => {
 
 export function feesCalculator({ investType, value, time, period, c }: IFee) {
   const investTime = period === 'monthly' ? Number(time) : Number(time) * 12;
-  const totalYield = Number(value) - (Number(c) * Number(time));
+  
+  const totalYield = Number(value) - (Number(c) * Number(investTime));
   return {
     calcFee: function() {
       const fee = calcFee(investTime);
@@ -40,19 +41,19 @@ export function feesCalculator({ investType, value, time, period, c }: IFee) {
 
 export default function calculator(options: Options) {
   const { p, r, t, c, rateType, length } = options;
-  const rate = rateType === 'annually' ? Number(r) / 12 : r;
-  const time = length === 'annually' ? Number(t) * 12 : t;
+  const rate = rateType === 'annually' ? Number(r) / 12 : Number(r);
+  const time = length === 'annually' ? Number(t) * 12 : Number(t);
 
   return {
     simple: function() {
-      return (Number(p) * Number(rate) * Number(time)).toFixed(2);
+      return (Number(p) * Number(rate) * time).toFixed(2);
     },
     compound: function() {
-      return (Number(p) * (((1 + Number(rate)) ** Number(time)) - 1)).toFixed(2);
+      return (Number(p) * (((1 + Number(rate)) ** time) - 1)).toFixed(2);
     },
     compoundMonth: function() {
       if (c) {
-        return ((Number(c) * (((1 + (Number(rate) / 100)) ** Number(time)) - 1)) / (Number(rate) / 100)).toFixed(2);
+        return ((Number(c) * (((1 + (rate / 100)) ** time) - 1)) / (rate / 100)).toFixed(2);
       }
       return 'Aporte mensal não providenciado';
     }

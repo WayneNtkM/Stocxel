@@ -11,7 +11,7 @@ export default function FormSimulate() {
 
   const handleSubmit = () => {
     const result = calculator({ c, p, length, r, rateType, t }).compoundMonth();
-
+    
     const { fee, grossValue, netValue } = feesCalculator({
       c,
       time: t,
