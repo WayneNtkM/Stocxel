@@ -1,17 +1,9 @@
-import React from 'react'
-import Header from './Header'
 import Link from 'next/link'
-import DivStocksFII from './smallComponents/Div.StocksFII'
-import DivSimulate from './smallComponents/Div.Simulate'
+import React from 'react'
 
-export default function Home() {
+export default function DivStocksFII() {
   return (
-    <div className='w-[100vw] flex flex-col gap-4 mb-4'>
-      <Header />
-      <div className='w-[100vw] flex flex-col gap-8'>
-        <DivStocksFII />
-        <DivSimulate />
-        <div className='flex flex-col items-center gap-[1em] p-[2em]'>
+    <div className='flex flex-col items-center gap-[1em] p-[2em]'>
           <strong className='text-[38px] leading-[58px] font-[700]'>
             Busque por <b>ações</b> e <b>FIIS</b>
           </strong>
@@ -27,8 +19,5 @@ export default function Home() {
             Começar
           </Link>
         </div>
-      </div>
-      <hr className='w-[300px] bg-slate-800 m-auto border-transparent' />
-    </div>
   )
 }

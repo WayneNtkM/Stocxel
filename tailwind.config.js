@@ -9,6 +9,9 @@ module.exports = {
       width: {
         "calc": "calc(350px * 9)"
       },
+      height: {
+        "calc": "calc(350px * 9)"
+      },
       variants: {
         animation: ["motion-safe"]
       },
