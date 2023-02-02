@@ -1,4 +1,5 @@
 import mongoose, { Mongoose } from 'mongoose';
+import 'dotenv/config';
 
 declare global {
   var mongoose: {
