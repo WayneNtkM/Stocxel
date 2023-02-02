@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { procedure, router } from '../trpc';
+import Userservice from '../services/User.service';
 
 interface Stocks { 
   stocks: [{ 
@@ -25,6 +26,7 @@ export const appRouter = router({
       sorted: sortedArr.slice(0, 9),
     };
   }),
+  // user: procedure.input({  }).mutation(),
 });
 
 // export type definition of API
