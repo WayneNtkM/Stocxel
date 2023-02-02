@@ -19,6 +19,7 @@ module.exports = {
         fadeIn: "fadeInUp 1s ease-in forwards",
         scale: "scale 2s",
         carousel: "carousel 40s linear infinite",
+        rotate: "rotate 4s linear infinite",
       },
     }
   },

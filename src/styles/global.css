@@ -35,9 +35,11 @@ body {
           transform: translateY(0);
       }
   }
+
   .fadeInUp {
       animation: fadeInUp 1s;
-  }
+    }
+
   @keyframes scale {
       0% {
           opacity: 0;
@@ -49,6 +51,7 @@ body {
           transform: scale(1);
       }
   }
+
   .scale {
       animation: scale 1s;
   }
@@ -60,6 +63,16 @@ body {
 
     100% {
         transform: translateX(calc(-350px * 4.5));
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
   }
 
