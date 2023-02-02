@@ -4,9 +4,9 @@ import type { AppProps } from 'next/app';
 import { SessionProvider } from 'next-auth/react';
 import { trpc } from '../utils/trpc';
 
-function App({ Component, pageProps: { ...pageProps } }: AppProps) {
+function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <SessionProvider>
+    <SessionProvider session={session}>
       <Component {...pageProps} />
     </SessionProvider>
   )
