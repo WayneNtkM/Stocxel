@@ -14,9 +14,10 @@ export default class Userservice {
   public static async loginUser({ email, password }: { email: UserDocument['email']; password: UserDocument['password']; }) {
     const user = await Userservice.findOneUser({ email }, { lean: true });
 
-    if (!user || !bcrypt.compareSync(password, user.password)) {
+    if (!user) {
       throw new Error('User does not exist');
     }
+
     return user;
   }
 }
